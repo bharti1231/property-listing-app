@@ -1,0 +1,22 @@
+<div class="container">
+	<div class="card-deck">
+		<div class="card">
+			<div class="card-body text-center">
+				 <ul class="list-group">
+        	<li 
+        	*ngFor="let pro of properties"
+        	class="list-group-item">
+        	<h3 class="text-center">{{pro.name}}</h3>
+        	<h3 class="text-center">{{pro.city}}</h3>
+        	<h3 class="text-center">{{pro.address}}</h3>
+        	<div><img src="{{pro.image}}"></div>
+        	</li>
+        	
+        </ul>
+  
+			
+
+			</div>	
+		</div>
+	</div>
+</div>

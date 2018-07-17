@@ -1,0 +1,100 @@
+<div class="container">
+	<div class="row mt-5 mb-4 ">
+		<div class="col-md-6 offset-md-3">
+			<div class="card">
+				<div class="card-header">
+					<h3 class="text-center">New User Form</h3>
+				</div>
+				<div class="card-body">
+				<form (ngSubmit)="onSubmit(f)"#f="ngForm">
+					<div class="form-group">
+					<label>Name</label>
+					<input type="text"
+					 name="name"
+					 class="form-control" 
+					 required minlength="8" 
+
+					 [(ngModel)]="property.name" #name="ngModel"
+					 >
+					 <div *ngIf="name.invalid &&(name.dirty||name.touched)" class="alert alert-danger">
+					 	 <div *ngIf="name.errors.required">
+  							  Name is required. 
+  						</div>
+ 							<div *ngIf="name.errors.minlength">
+    								Name must be at least 8 characters long.
+  							</div>
+						
+    				</div>
+					 
+					
+					</div>
+					<div class="form-group">
+					<label>image</label>
+					<input type="text"
+					 name="image"
+					 class="form-control"
+					  required minlength="4" 
+
+					 [(ngModel)]="property.image" #image="ngModel"
+					 >
+					 <div *ngIf="image.invalid &&(image.dirty||image.touched)" class="alert alert-danger">
+					 	 <div *ngIf="image.errors.required">
+  							  image is required. 
+  						</div>
+ 							<div *ngIf=" image.errors.minlength">
+    							image	must be at least 4 characters long.
+  							</div>
+						</div>
+					
+					</div>
+					
+					<div class="form-group">
+					<label>address</label>
+					<input type="text"
+					 name="address"
+					 class="form-control" 
+					 required minlength="4" 
+
+					 [(ngModel)]="user.address" #address="ngModel"
+					 >
+					  <div *ngIf="address.invalid &&(address.dirty||address.touched)" class="alert alert-danger">
+					 	 <div *ngIf="address.errors.required">
+  							  address is required. 
+  						</div>
+ 							<div *ngIf="address.errors.minlength">
+    								address must be at least 8 characters long.
+  							</div>
+						</div>
+				
+					</div>
+					
+					<div class="form-group">
+					<label>City</label>
+					<input type="text"
+					 name="city"									
+					 class="form-control" 
+					 required minlength="4" 
+
+					 [(ngModel)]="user.city" #city="ngModel"
+					 `					  <div *ngIf="city.invalid &&(city.dirty||city.touched)" class="alert alert-danger">
+					 	 <div *ngIf="city.errors.required">
+  							  city is required. 
+  						</div>
+ 							<div *ngIf="city.errors.minlength">
+    								city must be at least 8 characters long.
+  							</div>
+						</div>
+					
+					
+					<button type="submit" class="btn btn-primary">
+   							 Submit
+  					</button>
+				</form>	
+			</div>
+		</div>
+		
+	</div>
+	
+		
+</div>
+</div>
